@@ -75,6 +75,7 @@ curl http://127.0.0.1:30080/api/fast
 ~~~
 
 ### 5. [메인 실습] Go 부하 테스트
+- 빌드해놔서 실행 파일 있으니 그냥 그것만 실행해도 됨
 
 - 이제 화면을 분할하여 한쪽에는 로그를, 한쪽에는 부하 툴을 띄웁니다.
 
@@ -86,7 +87,7 @@ curl http://127.0.0.1:30080/api/fast
 
 ~~~Bash
 cd ../03-load-tester
-go run main.go -url=http://<URL>/api/fast -n 100 -c 10
+go run main.go -url=http://<URL>/api/fast -n 100 -c 10 
 ~~~
 3. 서버 늘리기: `kubectl scale deployment k8s-demo-app --replicas=5`
 
